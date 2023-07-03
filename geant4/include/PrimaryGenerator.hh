@@ -13,9 +13,11 @@ public:
 	PrimaryGeneratorAction();
 	~PrimaryGeneratorAction();
 
+	//generate primary vertexes routine
 	virtual void GeneratePrimaries(G4Event*);
 
 private:
+	//HepMC3 ascii file reader
 	G4HepMC3AsciiReader *asciiInput;
 };
 

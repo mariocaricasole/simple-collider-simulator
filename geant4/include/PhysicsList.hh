@@ -3,6 +3,7 @@
 
 #include "FTFP_BERT.hh"
 
+//using FTFP_BERT physics list as a base class
 class PhysicsList : public FTFP_BERT
 {
 public:

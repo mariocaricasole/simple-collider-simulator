@@ -13,7 +13,7 @@
 
 int main(int argc, char** argv)
 {
-    //define run manager, either multithreaded or not
+    //define run manager
     G4RunManager *runManager = new G4RunManager();
 
     /* USER ACTIONS */

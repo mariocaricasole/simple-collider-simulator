@@ -27,7 +27,7 @@ void DetectorConstruction::DefineMaterials()
 	G4Element *H = nist->FindOrBuildElement("H");
 	
 	//world material
-	Air = nist->FindOrBuildMaterial("G4_AIR");
+	Air = nist->FindOrBuildMaterial("G4_Galactic");
 
 	//define scintillator material
 	Scinti = new G4Material("Scintillator", 1.032*g/cm3, 2);
@@ -45,7 +45,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	G4LogicalVolume *logicHall = new G4LogicalVolume(solidHall, Air, "logicHall");
 	G4VPhysicalVolume *physHall= new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicHall, "physHall", 0, false, 0, true);
 	
-
+	
 	//tracker
 	G4VSolid *solidTracker = new G4Tubs("solidTracker", trkTubs_rmin, trkTubs_rmax, trkTubs_dz, trkTubs_sphi, trkTubs_dphi);
 	G4LogicalVolume *logicTracker = new G4LogicalVolume(solidTracker, Silicon, "logicTracker");
