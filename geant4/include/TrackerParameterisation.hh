@@ -1,15 +1,15 @@
-#ifndef TRACKER_HH
-#define TRACKER_HH
+#ifndef TRACKER_PARAMETERISATION_HH
+#define TRACKER_PARATETERISATION_HH
 
 #include "G4VPVParameterisation.hh"
 #include "G4SystemOfUnits.hh"
 
-class TrackerParametrisation : public G4VPVParameterisation
+class TrackerParameterisation : public G4VPVParameterisation
 { 
   public:
   
-    TrackerParametrisation();
-    virtual ~TrackerParametrisation();
+    TrackerParameterisation();
+    virtual ~TrackerParameterisation();
     void ComputeTransformation(const G4int copyNo, G4VPhysicalVolume *physVol) const;
     void ComputeDimensions(G4Tubs &trackerLayer, const G4int copyNo, const G4VPhysicalVolume * physVol) const;
 

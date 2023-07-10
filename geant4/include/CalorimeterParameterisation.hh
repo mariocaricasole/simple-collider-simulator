@@ -1,13 +1,13 @@
-#ifndef CALORIMETER_HH
-#define CALORIMETER_HH
+#ifndef CALORIMETER_PARAMETERISATION_HH
+#define CALORIMETER_PARAMETERISATION_HH
 
 #include "G4VPVParameterisation.hh"
 
-class CalorimeterParametrisation : public G4VPVParameterisation
+class CalorimeterParameterisation : public G4VPVParameterisation
 {
 public:
-    CalorimeterParametrisation();
-    ~CalorimeterParametrisation();
+    CalorimeterParameterisation();
+    ~CalorimeterParameterisation();
     void ComputeTransformation(const G4int copyNo, G4VPhysicalVolume *physVol) const;
     void ComputeDimensions(G4Tubs & calorimeterLayer, const G4int copyNo, const G4VPhysicalVolume * physVol) const;
 

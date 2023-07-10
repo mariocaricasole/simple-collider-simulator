@@ -48,8 +48,10 @@ G4double caloCell_sphi;
 G4double caloCell_dphi;
 
 //Muon chambers parameters
+G4int nomuWheels;
+G4int nomuLayers;
 G4int nomucounter;
-G4double muBox_radius;
-G4double muBox_width;
+G4double muBox_radius[4];
+G4double muBox_width[4];
 G4double muBox_thick;
 G4double muBox_length;

@@ -1,6 +1,6 @@
-expHall_x = 600.*cm;
-expHall_y = 600.*cm;
-expHall_z = 600.*cm;
+expHall_x = 1000.*cm;
+expHall_y = 1000.*cm;
+expHall_z = 1500.*cm;
 
 trkTubs_rmax =  50.*cm;
 trkTubs_rmin =  20.*cm;
@@ -45,8 +45,19 @@ caloRing_dz   = caloCell_dz/segmentsinZ ;
 caloRing_sphi = caloCell_sphi;
 caloRing_dphi = caloCell_dphi;
 
-nomucounter = 4;
-muBox_radius = 350.*cm;
-muBox_width  = muBox_radius - 5.*cm;
+nomucounter = 12;
+nomuLayers = 4;
+nomuWheels = 5;
+
+muBox_radius[0] = 400.*cm;
+muBox_radius[1] = 500.*cm;
+muBox_radius[2] = 600.*cm;
+muBox_radius[3] = 700.*cm;
+
 muBox_thick  = 1.*cm;
-muBox_length = expHall_z - 10.*cm;
+muBox_length = 120*cm;
+for(int i=0; i<nomuLayers; i++)
+{
+	muBox_width[i]  = 2*muBox_radius[i]*(1-std::cos(360.*deg/nomucounter)) - 5.*cm;
+}
+

@@ -10,9 +10,11 @@
 #include "G4PVPlacement.hh"
 #include "G4PVParameterised.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4VisAttributes.hh"
 
-#include "TrackerParameters.hh"
-#include "CalorimeterParameters.hh"
+#include "TrackerParameterisation.hh"
+#include "CalorimeterParameterisation.hh"
+#include "MuonBarrelParameterisation.hh"
 
 class DetectorConstruction : public G4VUserDetectorConstruction
 {
@@ -24,7 +26,7 @@ public:
 
 private:
     //declare materials needed in the detector
-    G4Material *Air, *Scinti, *Silicon, *Argon, *Lead;
+    G4Material *Air, *Scinti, *Silicon, *Argon, *Lead, *Steel;
 
     //define material properties
     void DefineMaterials();
